@@ -1,0 +1,237 @@
+{
+  "surah": 81,
+  "ayah": 11,
+  "text": "وَإِذَا ٱلسَّمَآءُ كُشِطَتْ",
+  "tokens": [
+    {
+      "token": "و",
+      "id": 28,
+      "word": 0,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "a",
+      "id": 31,
+      "word": 0,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "ء",
+      "id": 2,
+      "word": 0,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "i",
+      "id": 32,
+      "word": 0,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "ذ",
+      "id": 10,
+      "word": 0,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "a",
+      "id": 31,
+      "word": 0,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "|",
+      "id": 1,
+      "word": null,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "س",
+      "id": 13,
+      "word": 1,
+      "geminated": true,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": [
+        "R133_R160_IDGHAM_KAMIL"
+      ]
+    },
+    {
+      "token": "a",
+      "id": 31,
+      "word": 1,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "م",
+      "id": 25,
+      "word": 1,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "aa",
+      "id": 34,
+      "word": 1,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [
+        {
+          "kind": "free",
+          "allowed": [
+            4,
+            5
+          ],
+          "canonical": 4,
+          "scoring": [
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "rules": [
+        "R185_MUTTASIL"
+      ]
+    },
+    {
+      "token": "ء",
+      "id": 2,
+      "word": 1,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "u",
+      "id": 33,
+      "word": 1,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "|",
+      "id": 1,
+      "word": null,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "ك",
+      "id": 23,
+      "word": 2,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "u",
+      "id": 33,
+      "word": 2,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "ش",
+      "id": 14,
+      "word": 2,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "i",
+      "id": 32,
+      "word": 2,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "ط",
+      "id": 17,
+      "word": 2,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": [
+        "R210_ISTILA"
+      ]
+    },
+    {
+      "token": "a",
+      "id": 31,
+      "word": 2,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "ت",
+      "id": 4,
+      "word": 2,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    }
+  ]
+}

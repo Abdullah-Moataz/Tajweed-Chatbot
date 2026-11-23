@@ -1,0 +1,341 @@
+{
+  "surah": 85,
+  "ayah": 20,
+  "text": "وَٱللَّهُ مِن وَرَآئِهِم مُّحِيطٌۢ",
+  "tokens": [
+    {
+      "token": "و",
+      "id": 28,
+      "word": 0,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "a",
+      "id": 31,
+      "word": 0,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "ل",
+      "id": 24,
+      "word": 0,
+      "geminated": true,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": [
+        "R133_R160_IDGHAM_KAMIL",
+        "R212_LAM_JALALA"
+      ]
+    },
+    {
+      "token": "aa",
+      "id": 34,
+      "word": 0,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [
+        {
+          "kind": "fixed",
+          "allowed": [
+            2
+          ],
+          "canonical": 2,
+          "scoring": [
+            2
+          ]
+        }
+      ],
+      "rules": [
+        "R134_LAM_JALALA_ALIF",
+        "R180_TABEEI"
+      ]
+    },
+    {
+      "token": "ه",
+      "id": 27,
+      "word": 0,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "u",
+      "id": 33,
+      "word": 0,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "|",
+      "id": 1,
+      "word": null,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "م",
+      "id": 25,
+      "word": 1,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "i",
+      "id": 32,
+      "word": 1,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "|",
+      "id": 1,
+      "word": null,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "و",
+      "id": 28,
+      "word": 2,
+      "geminated": false,
+      "ghunna": [
+        "idgham"
+      ],
+      "qalqalah": [],
+      "length": [
+        {
+          "kind": "fixed",
+          "allowed": [
+            2
+          ],
+          "canonical": 2,
+          "scoring": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "rules": [
+        "R141_IDGHAM_GHUNNA_NAQIS"
+      ]
+    },
+    {
+      "token": "a",
+      "id": 31,
+      "word": 2,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "ر",
+      "id": 11,
+      "word": 2,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": [
+        "R211_REH"
+      ]
+    },
+    {
+      "token": "aa",
+      "id": 34,
+      "word": 2,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [
+        {
+          "kind": "free",
+          "allowed": [
+            4,
+            5
+          ],
+          "canonical": 4,
+          "scoring": [
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "rules": [
+        "R185_MUTTASIL"
+      ]
+    },
+    {
+      "token": "ء",
+      "id": 2,
+      "word": 2,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "i",
+      "id": 32,
+      "word": 2,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "ه",
+      "id": 27,
+      "word": 2,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "i",
+      "id": 32,
+      "word": 2,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "|",
+      "id": 1,
+      "word": null,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "م",
+      "id": 25,
+      "word": 3,
+      "geminated": true,
+      "ghunna": [
+        "mushaddadah"
+      ],
+      "qalqalah": [],
+      "length": [
+        {
+          "kind": "fixed",
+          "allowed": [
+            2
+          ],
+          "canonical": 2,
+          "scoring": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "rules": [
+        "R133_R160_IDGHAM_KAMIL",
+        "R170_GHUNNA_MUSHADDADAH"
+      ]
+    },
+    {
+      "token": "u",
+      "id": 33,
+      "word": 3,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "ح",
+      "id": 7,
+      "word": 3,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "ii",
+      "id": 35,
+      "word": 3,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [
+        {
+          "kind": "free",
+          "allowed": [
+            2,
+            4,
+            6
+          ],
+          "canonical": 4,
+          "scoring": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "rules": [
+        "R189_AARED"
+      ]
+    },
+    {
+      "token": "ط",
+      "id": 17,
+      "word": 3,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [
+        "kubra"
+      ],
+      "length": [],
+      "rules": [
+        "R201_QALQALAH_KUBRA",
+        "R210_ISTILA"
+      ]
+    }
+  ]
+}

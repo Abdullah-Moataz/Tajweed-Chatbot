@@ -1,0 +1,214 @@
+{
+  "surah": 88,
+  "ayah": 3,
+  "text": "عَامِلَةٌ نَّاصِبَةٌ",
+  "tokens": [
+    {
+      "token": "ع",
+      "id": 19,
+      "word": 0,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "aa",
+      "id": 34,
+      "word": 0,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [
+        {
+          "kind": "fixed",
+          "allowed": [
+            2
+          ],
+          "canonical": 2,
+          "scoring": [
+            2
+          ]
+        }
+      ],
+      "rules": [
+        "R180_TABEEI"
+      ]
+    },
+    {
+      "token": "م",
+      "id": 25,
+      "word": 0,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "i",
+      "id": 32,
+      "word": 0,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "ل",
+      "id": 24,
+      "word": 0,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "a",
+      "id": 31,
+      "word": 0,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "ت",
+      "id": 4,
+      "word": 0,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "u",
+      "id": 33,
+      "word": 0,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "|",
+      "id": 1,
+      "word": null,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "ن",
+      "id": 26,
+      "word": 1,
+      "geminated": true,
+      "ghunna": [
+        "idgham"
+      ],
+      "qalqalah": [],
+      "length": [
+        {
+          "kind": "fixed",
+          "allowed": [
+            2
+          ],
+          "canonical": 2,
+          "scoring": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "rules": [
+        "R141_IDGHAM_GHUNNA"
+      ]
+    },
+    {
+      "token": "aa",
+      "id": 34,
+      "word": 1,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [
+        {
+          "kind": "fixed",
+          "allowed": [
+            2
+          ],
+          "canonical": 2,
+          "scoring": [
+            2
+          ]
+        }
+      ],
+      "rules": [
+        "R180_TABEEI"
+      ]
+    },
+    {
+      "token": "ص",
+      "id": 15,
+      "word": 1,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": [
+        "R210_ISTILA"
+      ]
+    },
+    {
+      "token": "i",
+      "id": 32,
+      "word": 1,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "ب",
+      "id": 3,
+      "word": 1,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "a",
+      "id": 31,
+      "word": 1,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "ه",
+      "id": 27,
+      "word": 1,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": [
+        "R122_TAA_MARBUTA_WAQF"
+      ]
+    }
+  ]
+}

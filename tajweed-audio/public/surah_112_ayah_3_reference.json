@@ -1,0 +1,238 @@
+{
+  "surah": 112,
+  "ayah": 3,
+  "text": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+  "tokens": [
+    {
+      "token": "ل",
+      "id": 24,
+      "word": 0,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "a",
+      "id": 31,
+      "word": 0,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "م",
+      "id": 25,
+      "word": 0,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "|",
+      "id": 1,
+      "word": null,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "ي",
+      "id": 29,
+      "word": 1,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "a",
+      "id": 31,
+      "word": 1,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "ل",
+      "id": 24,
+      "word": 1,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "i",
+      "id": 32,
+      "word": 1,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "د",
+      "id": 9,
+      "word": 1,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [
+        "sughra"
+      ],
+      "length": [],
+      "rules": [
+        "R200_QALQALAH_SUGHRA"
+      ]
+    },
+    {
+      "token": "|",
+      "id": 1,
+      "word": null,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "و",
+      "id": 28,
+      "word": 2,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "a",
+      "id": 31,
+      "word": 2,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "ل",
+      "id": 24,
+      "word": 2,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "a",
+      "id": 31,
+      "word": 2,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "م",
+      "id": 25,
+      "word": 2,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "|",
+      "id": 1,
+      "word": null,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "ي",
+      "id": 29,
+      "word": 3,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "uu",
+      "id": 36,
+      "word": 3,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [
+        {
+          "kind": "fixed",
+          "allowed": [
+            2
+          ],
+          "canonical": 2,
+          "scoring": [
+            2
+          ]
+        }
+      ],
+      "rules": [
+        "R180_TABEEI"
+      ]
+    },
+    {
+      "token": "ل",
+      "id": 24,
+      "word": 3,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "a",
+      "id": 31,
+      "word": 3,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [],
+      "length": [],
+      "rules": []
+    },
+    {
+      "token": "د",
+      "id": 9,
+      "word": 3,
+      "geminated": false,
+      "ghunna": [],
+      "qalqalah": [
+        "kubra"
+      ],
+      "length": [],
+      "rules": [
+        "R201_QALQALAH_KUBRA"
+      ]
+    }
+  ]
+}

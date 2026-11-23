@@ -1,0 +1,498 @@
+{
+  "R011_MUQATTAAT": {
+    "rule_id": "R011_MUQATTAAT",
+    "phase": "P1",
+    "name_ar": "الحروف المقطعة وهجاؤها",
+    "name_en": "muqatta'at spell-out (incl. yaseen/noon izhar, ha/ta qasr)",
+    "spec": "SPEC-011",
+    "citation": "تحفة الأطفال؛ النشر 1:346"
+  },
+  "R012_SEEN_SAD": {
+    "rule_id": "R012_SEEN_SAD",
+    "phase": "P1",
+    "name_ar": "ما يقرأ بالسين أو الصاد (يبصط، بصطة، المصيطرون، بمصيطر)",
+    "name_en": "seen/sad khilaf words",
+    "spec": "SPEC-012",
+    "citation": "الشاطبية بيتا 514-515؛ سراج القارئ 1:163"
+  },
+  "R012B_DAAF_DAMM": {
+    "rule_id": "R012B_DAAF_DAMM",
+    "phase": "P1",
+    "name_ar": "ضَعْف: الفتح المقدم والضم وجه ثان",
+    "name_en": "daaf fath (preferred) / damm wajh, 30:54",
+    "spec": "SPEC-012",
+    "citation": "الشاطبية بيتا 722-723؛ التيسير 174-176"
+  },
+  "R013_ELIDED_WAW_LIYASUU": {
+    "rule_id": "R013_ELIDED_WAW_LIYASUU",
+    "phase": "P1",
+    "name_ar": "لِيَسُوءُوا: إثبات الواو المحذوفة رسمًا والمد المتصل عليها",
+    "name_en": "restored elided waw, 17:7",
+    "spec": "SPEC-012",
+    "citation": "الحجة للقراء السبعة 5:85؛ المحكم في نقط المصاحف 1:168؛ دليل الحيران 1:405-406"
+  },
+  "R014B_ISTIFHAM_TASHEEL": {
+    "rule_id": "R014B_ISTIFHAM_TASHEEL",
+    "phase": "P1",
+    "name_ar": "تسهيل همزة الوصل بعد همزة الاستفهام (الوجه الثاني)",
+    "name_en": "istifham tasheel wajh (ibdal preferred)",
+    "spec": "SPEC-012",
+    "citation": "الشاطبية أبيات 192-194؛ النشر 1:377 «وقال آخرون: تسهل بين بين»"
+  },
+  "R110_WASL_START": {
+    "rule_id": "R110_WASL_START",
+    "phase": "P3",
+    "name_ar": "أحكام الابتداء بهمزة الوصل (الفتح والكسر والضم)",
+    "name_en": "hamzat al-wasl vowel at ibtida'",
+    "spec": "SPEC-110",
+    "citation": "المقدمة الجزرية 101-103"
+  },
+  "R110_BADAL_IBTIDA": {
+    "rule_id": "R110_BADAL_IBTIDA",
+    "phase": "P3",
+    "name_ar": "إبدال الهمزة الساكنة حرف مد عند الابتداء (ٱئْتِ: إِيتِ)",
+    "name_en": "sakin hamza becomes a madd letter at ibtida'",
+    "spec": "SPEC-110",
+    "citation": "الجزرية؛ هداية القاري 2:482؛ النشر 1:343 «حرف المد إذا وقع بعد همزة الوصل حالة الابتداء نحو ايت بقرآن»"
+  },
+  "R112_STRIP_INITIAL_SHADDA": {
+    "rule_id": "R112_STRIP_INITIAL_SHADDA",
+    "phase": "P3",
+    "name_ar": "تخفيف الشدة المرسومة أول الآية عند الابتداء (لَّيْسَ: لَيْسَ)",
+    "name_en": "ayah-initial junction shadda degeminates at ibtida'",
+    "spec": "SPEC-110",
+    "citation": "(ضبط المصحف؛ علامة إدغام المتماثلين والمتقاربين بين الآيتين؛ المحكم في نقط المصاحف للداني)"
+  },
+  "R120_ISKAN": {
+    "rule_id": "R120_ISKAN",
+    "phase": "P4",
+    "name_ar": "الإسكان للوقف",
+    "name_en": "iskan al-waqf",
+    "spec": "SPEC-120",
+    "citation": "النشر 2:120 «فأما السكون فهو الأصل في الوقف على الكلم المتحركة وصلا»"
+  },
+  "R121_MADD_EWAD": {
+    "rule_id": "R121_MADD_EWAD",
+    "phase": "P4",
+    "name_ar": "مد العوض عن تنوين النصب وقفًا",
+    "name_en": "madd al-'iwad at waqf",
+    "spec": "SPEC-121",
+    "citation": "تحفة الأطفال؛ هداية القاري"
+  },
+  "R121_EWAD_SEAT_SILENT": {
+    "rule_id": "R121_EWAD_SEAT_SILENT",
+    "phase": "P4",
+    "name_ar": "ألف تنوين النصب المرسومة لا تُنطق وصلًا",
+    "name_en": "the tanween-fath seat alif is silent in wasl",
+    "spec": "SPEC-121",
+    "citation": "النشر 2:120؛ تحفة الأطفال"
+  },
+  "R122_TAA_MARBUTA_WAQF": {
+    "rule_id": "R122_TAA_MARBUTA_WAQF",
+    "phase": "P4",
+    "name_ar": "الوقف على التاء المربوطة هاءً",
+    "name_en": "taa marbuta read as haa at waqf",
+    "spec": "SPEC-122",
+    "citation": "النشر 2:129؛ هداية القاري"
+  },
+  "R123_RAWM": {
+    "rule_id": "R123_RAWM",
+    "phase": "P4",
+    "name_ar": "الروم",
+    "name_en": "rawm (partial haraka at waqf)",
+    "spec": "SPEC-123",
+    "citation": "الشاطبية أبيات 368-373؛ النشر 2:121 «وأما الروم فهو عند القراء عبارة عن النطق ببعض الحركة»؛ التيسير 58-59"
+  },
+  "R123_ISHMAM": {
+    "rule_id": "R123_ISHMAM",
+    "phase": "P4",
+    "name_ar": "الإشمام",
+    "name_en": "ishmam (lip-rounding at waqf, damm only)",
+    "spec": "SPEC-123",
+    "citation": "الشاطبية أبيات 368-373؛ النشر 2:121 «وأما الإشمام فهو عبارة عن الإشارة إلى الحركة من غير تصويت»؛ التيسير 58-59"
+  },
+  "R130_WASL_ELISION": {
+    "rule_id": "R130_WASL_ELISION",
+    "phase": "P5",
+    "name_ar": "سقوط همزة الوصل درجًا",
+    "name_en": "hamzat al-wasl elided inside connected speech",
+    "spec": "SPEC-130",
+    "citation": "(التقاء الساكنين)؛ هداية القاري"
+  },
+  "R131_MADD_SHORTENING": {
+    "rule_id": "R131_MADD_SHORTENING",
+    "phase": "P5",
+    "name_ar": "حذف حرف المد لالتقاء الساكنين",
+    "name_en": "madd letter shortened before hamzat-al-wasl sakin",
+    "spec": "SPEC-131",
+    "citation": "هداية القاري 2:599 «يحذف حرف المد لالتقاء الساكنين»"
+  },
+  "R131_NOON_WIQAYA": {
+    "rule_id": "R131_NOON_WIQAYA",
+    "phase": "P5",
+    "name_ar": "كسر نون التنوين لالتقاء الساكنين عند همزة الوصل",
+    "name_en": "tanween noon takes kasra at iltiqa al-sakinayn (wasl junctions)",
+    "spec": "SPEC-131",
+    "citation": "النشر 2:315 «بالنصب والتنوين وكسره للساكنين»؛ هداية القاري"
+  },
+  "R132_SAKT": {
+    "rule_id": "R132_SAKT",
+    "phase": "P5",
+    "name_ar": "سكتات حفص اللازمة من طريق الشاطبية",
+    "name_en": "the four obligatory sakts",
+    "spec": "SPEC-132",
+    "citation": "الشاطبية بيتا 830-831؛ النشر 1:240-241؛ سراج القارئ 1:277"
+  },
+  "R132_MALIYAH_SAKT": {
+    "rule_id": "R132_MALIYAH_SAKT",
+    "phase": "P5",
+    "name_ar": "وجها وصل مَالِيَهْ هَلَكَ (السكت المقدم والإدغام)",
+    "name_en": "maliyah-halak wasl wajhan",
+    "spec": "SPEC-132",
+    "citation": "النشر 2:21-22؛ هداية القاري 1:236-237؛ فتح الوصيد 1:434؛ غيث النفع 1:601"
+  },
+  "R133_R160_IDGHAM_KAMIL": {
+    "rule_id": "R133_R160_IDGHAM_KAMIL",
+    "phase": "P5",
+    "name_ar": "الإدغام الكامل (اللام الشمسية والمثلان المتصلان)",
+    "name_en": "complete idgham: lam shamsiyya and adjacent mithlayn",
+    "spec": "SPEC-133",
+    "citation": "تحفة الأطفال «للام أل حالان قبل الأحرف»؛ النشر 2:18-19"
+  },
+  "R134_LAM_JALALA_ALIF": {
+    "rule_id": "R134_LAM_JALALA_ALIF",
+    "phase": "P5",
+    "name_ar": "ألف لفظ الجلالة المحذوفة رسمًا",
+    "name_en": "the dagger alif of the jalala",
+    "spec": "SPEC-134",
+    "citation": "الجزرية «وفخم اللام من اسم الله عن فتح أو ضم»"
+  },
+  "R135_MEEM_ALLAH": {
+    "rule_id": "R135_MEEM_ALLAH",
+    "phase": "P5",
+    "name_ar": "وصل الٓمٓ بلفظ الجلالة (فتح الميم وبقاء اللازم)",
+    "name_en": "alif-lam-meem joined to the jalala, 3:1-2",
+    "spec": "SPEC-011",
+    "citation": "السبعة 1:199؛ غيث النفع 1:129-130؛ النويري 2:231"
+  },
+  "R136_BASMALA_JOINS": {
+    "rule_id": "R136_BASMALA_JOINS",
+    "phase": "P5",
+    "name_ar": "البسملة بين السورتين وأوجه وصلها والوجه الممنوع",
+    "name_en": "basmala between surahs: the three legal joins, the forbidden fourth",
+    "spec": "SPEC-005",
+    "citation": "الشاطبية أبيات 100-107 «وبسمل بين السورتين بسنة»؛ غيث النفع 1:270؛ البدور الزاهرة 1:133"
+  },
+  "R140_IZHAR": {
+    "rule_id": "R140_IZHAR",
+    "phase": "P6",
+    "name_ar": "الإظهار الحلقي للنون الساكنة",
+    "name_en": "izhar halqi (noon sakinah)",
+    "spec": "SPEC-140",
+    "citation": "تحفة الأطفال «للحلق ست»؛ هداية القاري 1:181"
+  },
+  "R140_IZHAR_HALQI": {
+    "rule_id": "R140_IZHAR_HALQI",
+    "phase": "P6",
+    "name_ar": "الإظهار الحلقي للتنوين",
+    "name_en": "izhar halqi (tanween carrier)",
+    "spec": "SPEC-140",
+    "citation": "تحفة الأطفال «للحلق ست»؛ هداية القاري 1:181"
+  },
+  "R141_IDGHAM_GHUNNA": {
+    "rule_id": "R141_IDGHAM_GHUNNA",
+    "phase": "P6",
+    "name_ar": "الإدغام بغنة الكامل (ن، م)",
+    "name_en": "complete idgham with ghunna",
+    "spec": "SPEC-141",
+    "citation": "تحفة الأطفال «في يرملون»؛ النشر 2:22"
+  },
+  "R141_IDGHAM_GHUNNA_NAQIS": {
+    "rule_id": "R141_IDGHAM_GHUNNA_NAQIS",
+    "phase": "P6",
+    "name_ar": "الإدغام بغنة الناقص (و، ي)",
+    "name_en": "incomplete idgham with ghunna",
+    "spec": "SPEC-141",
+    "citation": "تحفة الأطفال؛ النشر 2:23 (الإدغام الناقص في الواو والياء)"
+  },
+  "R141_IZHAR_MUTLAQ": {
+    "rule_id": "R141_IZHAR_MUTLAQ",
+    "phase": "P6",
+    "name_ar": "الإظهار المطلق (الدنيا، بنيان، قنوان، صنوان)",
+    "name_en": "izhar mutlaq inside one word",
+    "spec": "SPEC-141",
+    "citation": "تحفة الأطفال «إلا إذا كانا بكلمة»؛ النشر 2:23"
+  },
+  "R142_IDGHAM_BILA_GHUNNA": {
+    "rule_id": "R142_IDGHAM_BILA_GHUNNA",
+    "phase": "P6",
+    "name_ar": "الإدغام بلا غنة (ل، ر)",
+    "name_en": "idgham without ghunna",
+    "spec": "SPEC-142",
+    "citation": "تحفة الأطفال «في اللام والرا ثم كررنه»؛ النشر 2:24"
+  },
+  "R143_IQLAB": {
+    "rule_id": "R143_IQLAB",
+    "phase": "P6",
+    "name_ar": "الإقلاب",
+    "name_en": "iqlab (noon/tanween to hidden meem before baa)",
+    "spec": "SPEC-143",
+    "citation": "تحفة الأطفال «والثالث الإقلاب»؛ هداية القاري 1:186"
+  },
+  "R144_IKHFA": {
+    "rule_id": "R144_IKHFA",
+    "phase": "P6",
+    "name_ar": "الإخفاء الحقيقي (الحروف الخمسة عشر)",
+    "name_en": "ikhfa haqiqi, all fifteen letters",
+    "spec": "SPEC-144",
+    "citation": "تحفة الأطفال «صف ذا ثنا...»؛ هداية القاري 1:187"
+  },
+  "R150_IKHFA_SHAFAWI": {
+    "rule_id": "R150_IKHFA_SHAFAWI",
+    "phase": "P7",
+    "name_ar": "الإخفاء الشفوي",
+    "name_en": "ikhfa shafawi",
+    "spec": "SPEC-150",
+    "citation": "تحفة الأطفال «فالأول الإخفاء عند الباء»؛ هداية القاري 1:191-196"
+  },
+  "R160_MUTAMATHILAYN": {
+    "rule_id": "R160_MUTAMATHILAYN",
+    "phase": "P8",
+    "name_ar": "إدغام المتماثلين الصغير",
+    "name_en": "idgham mutamathilayn saghir",
+    "spec": "SPEC-160",
+    "citation": "الجزرية «وأولي مثل وجنس إن سكن» أدغم؛ النشر 2:18"
+  },
+  "R161_NAQIS_TA_NO_QALQALAH": {
+    "rule_id": "R161_NAQIS_TA_NO_QALQALAH",
+    "phase": "P8",
+    "name_ar": "الإدغام الناقص للطاء في التاء (بقاء الإطباق ولا قلقلة)",
+    "name_en": "naqis taa idgham: itbaq retained, no qalqalah",
+    "spec": "SPEC-161",
+    "citation": "الجزرية «وبين الإطباق من أحطت مع بسطت»؛ النشر 2:19"
+  },
+  "R170_GHUNNA_MUSHADDADAH": {
+    "rule_id": "R170_GHUNNA_MUSHADDADAH",
+    "phase": "P9",
+    "name_ar": "غنة النون والميم المشددتين",
+    "name_en": "ghunna of mushaddad noon and meem",
+    "spec": "SPEC-170",
+    "citation": "تحفة الأطفال «وغن ميمًا ثم نونًا شددا»؛ لطائف الإشارات 1:350"
+  },
+  "R180_TABEEI": {
+    "rule_id": "R180_TABEEI",
+    "phase": "P10",
+    "name_ar": "المد الطبيعي",
+    "name_en": "madd tabee'i (2)",
+    "spec": "SPEC-180",
+    "citation": "تحفة الأطفال «والمد أصلي وفرعي له»"
+  },
+  "R180_PAUSAL_GLIDE": {
+    "rule_id": "R180_PAUSAL_GLIDE",
+    "phase": "P10",
+    "name_ar": "الحرف اللين الناشئ بإسكان الوقف",
+    "name_en": "waqf iskan exposing the leen glide",
+    "spec": "SPEC-180",
+    "citation": "الشاطبية باب المد؛ النشر 1:333"
+  },
+  "R181_BADAL": {
+    "rule_id": "R181_BADAL",
+    "phase": "P10",
+    "name_ar": "مد البدل",
+    "name_en": "madd al-badal (2)",
+    "spec": "SPEC-180",
+    "citation": "الشاطبية باب المد؛ النشر 1:339"
+  },
+  "R183_SILAH_WAQF_DROP": {
+    "rule_id": "R183_SILAH_WAQF_DROP",
+    "phase": "P10",
+    "name_ar": "سقوط صلة هاء الضمير وقفًا",
+    "name_en": "silah dropped at waqf",
+    "spec": "SPEC-183",
+    "citation": "الشاطبية أبيات 158-159؛ سراج القارئ 1:45"
+  },
+  "R184_SILAH_KUBRA": {
+    "rule_id": "R184_SILAH_KUBRA",
+    "phase": "P10",
+    "name_ar": "الصلة الكبرى قبل الهمز",
+    "name_en": "silah kubra before hamza",
+    "spec": "SPEC-184",
+    "citation": "الشاطبية بيت 158؛ النشر 1:306"
+  },
+  "R185_MUTTASIL": {
+    "rule_id": "R185_MUTTASIL",
+    "phase": "P10",
+    "name_ar": "المد الواجب المتصل",
+    "name_en": "madd muttasil (4-5)",
+    "spec": "SPEC-185",
+    "citation": "الشاطبية باب المد؛ النشر 1:315 «فوجب أن لا يعتقد أن قصر المتصل جائز عند أحد من القراء»"
+  },
+  "R185_MUTTASIL_WAQF": {
+    "rule_id": "R185_MUTTASIL_WAQF",
+    "phase": "P10",
+    "name_ar": "المتصل الموقوف عليه (جواز الست)",
+    "name_en": "muttasil at waqf admits 6",
+    "spec": "SPEC-185",
+    "citation": "الشاطبية باب المد؛ النشر 1:315-346؛ هداية القاري"
+  },
+  "R186_MUNFASIL": {
+    "rule_id": "R186_MUNFASIL",
+    "phase": "P10",
+    "name_ar": "المد الجائز المنفصل",
+    "name_en": "madd munfasil (4-5)",
+    "spec": "SPEC-186",
+    "citation": "الشاطبية؛ النشر 1:322"
+  },
+  "R187_LAZIM_MUTHAQQAL": {
+    "rule_id": "R187_LAZIM_MUTHAQQAL",
+    "phase": "P10",
+    "name_ar": "المد اللازم الكلمي",
+    "name_en": "madd lazim kalimi (6)",
+    "spec": "SPEC-187",
+    "citation": "تحفة الأطفال «ولازم إن السكون أصلا»؛ النشر 1:342"
+  },
+  "R187_R188_LAZIM": {
+    "rule_id": "R187_R188_LAZIM",
+    "phase": "P10",
+    "name_ar": "المد اللازم الحرفي",
+    "name_en": "madd lazim harfi (6)",
+    "spec": "SPEC-187",
+    "citation": "تحفة الأطفال «واللازم الحرفي أول السور»؛ النشر 1:346"
+  },
+  "R188_AIN_LEEN_LAZIM": {
+    "rule_id": "R188_AIN_LEEN_LAZIM",
+    "phase": "P10",
+    "name_ar": "عَيْن: اللين اللازم الحرفي (الوجهان والإشباع مقدم)",
+    "name_en": "'ayn: lazim leen, {4,6} with 6 preferred",
+    "spec": "SPEC-190",
+    "citation": "الشاطبية بيت 177؛ هداية القاري 1:343؛ حجة القراءات 1:521-522"
+  },
+  "R189_AARED": {
+    "rule_id": "R189_AARED",
+    "phase": "P10",
+    "name_ar": "المد العارض للسكون",
+    "name_en": "madd 'aared lil-sukun (2/4/6)",
+    "spec": "SPEC-189",
+    "citation": "تحفة الأطفال «ومثل ذا إن عرض السكون»"
+  },
+  "R190_LEEN": {
+    "rule_id": "R190_LEEN",
+    "phase": "P10",
+    "name_ar": "مد اللين",
+    "name_en": "madd al-leen (2/4/6 at waqf)",
+    "spec": "SPEC-190",
+    "citation": "الشاطبية باب المد؛ النشر 1:333"
+  },
+  "R190B_SALASILA_ITHBAT": {
+    "rule_id": "R190B_SALASILA_ITHBAT",
+    "phase": "P10",
+    "name_ar": "سَلَاسِلَا: إثبات الألف وقفًا ووجهه",
+    "name_en": "salasila waqf alif ithbat",
+    "spec": "SPEC-184",
+    "citation": "طيبة النشر (سلاسلا نوّن)؛ النويري 2:603؛ العميد 1:160-161"
+  },
+  "R190C_AATAANI_HADHF": {
+    "rule_id": "R190C_AATAANI_HADHF",
+    "phase": "P10",
+    "name_ar": "آتَانِ: وجها الوقف (إثبات الياء المقدم وحذفها)",
+    "name_en": "aataani waqf wajhan",
+    "spec": "SPEC-184",
+    "citation": "الشاطبية بيت 429؛ هداية القاري 2:544-545؛ إبراز المعاني 1:309"
+  },
+  "R200_QALQALAH_SUGHRA": {
+    "rule_id": "R200_QALQALAH_SUGHRA",
+    "phase": "P11",
+    "name_ar": "القلقلة الصغرى",
+    "name_en": "qalqalah sughra",
+    "spec": "SPEC-200",
+    "citation": "الشاطبية بيت 1158 «وفي قطب جد خمس قلقلة»؛ النشر 1:203"
+  },
+  "R201_QALQALAH_KUBRA": {
+    "rule_id": "R201_QALQALAH_KUBRA",
+    "phase": "P11",
+    "name_ar": "القلقلة الكبرى",
+    "name_en": "qalqalah kubra (waqf)",
+    "spec": "SPEC-200",
+    "citation": "الجزرية «وبينن مقلقلًا إن سكنا وإن يكن في الوقف كان أبينا»؛ هداية القاري 1:84-87"
+  },
+  "R202_QALQALAH_AKBAR": {
+    "rule_id": "R202_QALQALAH_AKBAR",
+    "phase": "P11",
+    "name_ar": "القلقلة الأكبر (الموقوف عليه مشددًا)",
+    "name_en": "qalqalah akbar (waqf on mushaddad)",
+    "spec": "SPEC-200",
+    "citation": "الجزرية «وبينن مقلقلًا إن سكنا وإن يكن في الوقف كان أبينا»؛ هداية القاري 1:84-87"
+  },
+  "R210_ISTILA": {
+    "rule_id": "R210_ISTILA",
+    "phase": "P12",
+    "name_ar": "تفخيم حروف الاستعلاء ومراتبه",
+    "name_en": "isti'la tafkheem and its maraatib",
+    "spec": "SPEC-210",
+    "citation": "المقدمة الجزرية (باب صفات الحروف)؛ النويري 1:237-238"
+  },
+  "R211_REH": {
+    "rule_id": "R211_REH",
+    "phase": "P12",
+    "name_ar": "أحكام الراء تفخيمًا وترقيقًا",
+    "name_en": "the raa decision table",
+    "spec": "SPEC-210",
+    "citation": "الجزرية باب الراءات «ورقق الراء إذا ما كسرت»؛ هداية القاري 1:130"
+  },
+  "R211_WAQF_KHILAF": {
+    "rule_id": "R211_WAQF_KHILAF",
+    "phase": "P12",
+    "name_ar": "فرش راءات الوقف الخلافية (مصر، القطر، أسر)",
+    "name_en": "the waqf raa khilaf words",
+    "spec": "SPEC-210",
+    "citation": "النشر 2:105، 2:110؛ النويري 2:33 «وأختار في مصر التفخيم وفي القطر الترقيق نظرا للوصل وعملا بالأصل»؛ هداية القاري 1:130-133"
+  },
+  "R212_LAM_JALALA": {
+    "rule_id": "R212_LAM_JALALA",
+    "phase": "P12",
+    "name_ar": "تفخيم لام الجلالة وترقيقها",
+    "name_en": "lam al-jalala tafkheem/tarqeeq",
+    "spec": "SPEC-210",
+    "citation": "الجزرية «وفخم اللام من اسم الله عن فتح أو ضم»"
+  },
+  "R214_IKHFA_TAFKHEEM": {
+    "rule_id": "R214_IKHFA_TAFKHEEM",
+    "phase": "P12",
+    "name_ar": "تبعية غنة الإخفاء لما بعدها تفخيمًا وترقيقًا",
+    "name_en": "ikhfa ghunna follows the trigger's tafkheem",
+    "spec": "SPEC-210",
+    "citation": "هداية القاري 1:181 «ومن تمام كيفية أدائها اتباعها لما بعدها من الحروف تفخيما وترقيقا»"
+  },
+  "R220_ISHMAM": {
+    "rule_id": "R220_ISHMAM",
+    "phase": "P13",
+    "name_ar": "إشمام تَأْمَنَّا",
+    "name_en": "ishmam of ta'manna, 12:11",
+    "spec": "SPEC-220",
+    "citation": "الشاطبية؛ هداية القاري 1:259-261؛ النشر 2:126"
+  },
+  "R220B_TAAMANNA_IKHTILAS": {
+    "rule_id": "R220B_TAAMANNA_IKHTILAS",
+    "phase": "P13",
+    "name_ar": "اختلاس تَأْمَنَّا (الوجه الثاني)",
+    "name_en": "ikhtilas wajh of ta'manna",
+    "spec": "SPEC-013b",
+    "citation": "الشاطبية؛ هداية القاري 1:259-261؛ النشر 2:126"
+  },
+  "R221_IMALA": {
+    "rule_id": "R221_IMALA",
+    "phase": "P13",
+    "name_ar": "إمالة مَجْر۪ىٰهَا",
+    "name_en": "imala, 11:41",
+    "spec": "SPEC-221",
+    "citation": "الشاطبية؛ (الموضع الوحيد لحفص)"
+  },
+  "R222_TASHEEL": {
+    "rule_id": "R222_TASHEEL",
+    "phase": "P13",
+    "name_ar": "تسهيل ءَا۬عْجَمِيٌّ",
+    "name_en": "tasheel, 41:44",
+    "spec": "SPEC-222",
+    "citation": "الشاطبية؛ (الموضع الوحيد لحفص)"
+  }
+}

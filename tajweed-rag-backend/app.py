@@ -1,0 +1,77 @@
+# cd "$HOME\Desktop\tajweed-rag-backend"
+# .\.venv\Scripts\python.exe -m uvicorn app:app --reload
+
+import os
+from pathlib import Path
+from functools import lru_cache
+
+import chromadb
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel, Field
+from openai import OpenAI
+from sentence_transformers import SentenceTransformer
+from dotenv import load_dotenv
+load_dotenv()
+
+app = FastAPI(title="Tajweed RAG API")
+app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"], allow_methods=["GET", "POST"], allow_headers=["*"])
+
+JAIS_MODEL = "IFM/Jais-3-MoVA-36B-A4B"
+SYSTEM_PROMPT = """أنت مساعد تعليمي ودود ومتخصص في علم التجويد، وهدفك مساعدة الطلاب على فهم أحكام التجويد بطريقة سهلة ومشوقة.
+1. أجب عن السؤال المطروح مباشرة دون إضافة معلومات غير مطلوبة.
+2. اعتمد حصرياً على النصوص المرجعية المسترجعة.
+3. لا تضف أحكاماً أو استثناءات إلا إذا كانت ضرورية للإجابة.
+4. حافظ على كتابة الآيات القرآنية وتشكيلها كما وردت في المصدر.
+5. لا تغير الأمثلة القرآنية أو تعيد تشكيلها من عندك.
+6. إذا كان السؤال يطلب حالات أو شروطاً، فاذكرها بشكل منظم.
+7. لا تذكر أرقام الصفحات.
+8. إذا لم تتوفر معلومات كافية، فصرح بذلك.
+9. استخدم لغة عربية واضحة ومبسطة تناسب مستوى الطالب.
+10. استخدم أسلوباً لطيفاً ومشجعاً، واظهر الاهتمام بتقدم الطالب.
+11. قدم عبارات تشجيعية قصيرة عند الحاجة، دون مبالغة أو تكرار.
+12. إذا كان السؤال خارج نطاق علم التجويد، فلا تجب عنه، واستخدم الرد التالي حرفياً دون أي تعديل:
+"يسعدني سؤالك! 🌷 أنا هنا فقط لمساعدتك في تعلم أحكام التجويد. يمكنك سؤالي عن أي قاعدة تجويدية، وسأساعدك بكل سرور."
+13. إذا كان السؤال تحية أو شكراً، فرد بلطف واختصار دون الحاجة إلى معلومات مرجعية."""
+
+class Question(BaseModel):
+    question: str = Field(min_length=1, max_length=1500)
+    level: str | None = None
+
+@lru_cache(maxsize=1)
+def rag_resources():
+    db_path = Path(os.getenv("CHROMA_DB_PATH", "./chroma_db"))
+    if not db_path.is_dir():
+        raise RuntimeError(f"Chroma folder not found: {db_path.resolve()}")
+    collection = chromadb.PersistentClient(path=str(db_path)).get_collection("tajweed")
+    embedder = SentenceTransformer("intfloat/multilingual-e5-base")
+    return collection, embedder
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
+@app.post("/ask")
+def ask(payload: Question):
+    if not os.getenv("JAIS_API_KEY"):
+        raise HTTPException(status_code=500, detail="JAIS_API_KEY is missing")
+    try:
+        collection, model = rag_resources()
+        embedding = model.encode("query: " + payload.question, normalize_embeddings=True)
+        args = {"query_embeddings": [embedding.tolist()], "n_results": 5,
+                "include": ["documents", "metadatas", "distances"]}
+        if payload.level is not None:
+            args["where"] = {"level": payload.level}
+        results = collection.query(**args)
+        passages = [f"المستوى: {meta.get('level', '')}\nالموضوع: {meta.get('topic', '')}\nالنص: {text}"
+                    for text, meta in zip(results["documents"][0], results["metadatas"][0])]
+        context = "\n\n---\n\n".join(passages)
+        client = OpenAI(api_key=os.environ["JAIS_API_KEY"], base_url="https://api.ifm.ai/v1")
+        response = client.chat.completions.create(
+            model=JAIS_MODEL,
+            messages=[{"role": "system", "content": SYSTEM_PROMPT},
+                      {"role": "user", "content": f"السؤال: {payload.question}\n\nالنصوص المرجعية:\n{context}"}],
+            temperature=0.2)
+        return {"answer": response.choices[0].message.content}
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=f"RAG request failed: {type(exc).__name__}") from exc
