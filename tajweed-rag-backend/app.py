@@ -4,18 +4,18 @@
 import os
 from pathlib import Path
 from functools import lru_cache
+import traceback
 
-import chromadb
+from pinecone import Pinecone, EmbedQuery
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from openai import OpenAI
-from sentence_transformers import SentenceTransformer
 from dotenv import load_dotenv
 load_dotenv()
 
 app = FastAPI(title="Tajweed RAG API")
-app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"], allow_methods=["GET", "POST"], allow_headers=["*"])
+app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173", "http://127.0.0.1:5173", "https://tajweed-assistant.vercel.app"], allow_methods=["GET", "POST"], allow_headers=["*"])
 
 JAIS_MODEL = "IFM/Jais-3-MoVA-36B-A4B"
 SYSTEM_PROMPT = """أنت مساعد تعليمي ودود ومتخصص في علم التجويد، وهدفك مساعدة الطلاب على فهم أحكام التجويد بطريقة سهلة ومشوقة.
@@ -40,12 +40,10 @@ class Question(BaseModel):
 
 @lru_cache(maxsize=1)
 def rag_resources():
-    db_path = Path(os.getenv("CHROMA_DB_PATH", "./chroma_db"))
-    if not db_path.is_dir():
-        raise RuntimeError(f"Chroma folder not found: {db_path.resolve()}")
-    collection = chromadb.PersistentClient(path=str(db_path)).get_collection("tajweed")
-    embedder = SentenceTransformer("intfloat/multilingual-e5-base")
-    return collection, embedder
+    pc = Pinecone(
+        api_key=os.environ["PINECONE_API_KEY"]
+    )
+    return pc.index(os.environ["PINECONE_INDEX_NAME"])
 
 @app.get("/health")
 def health():
@@ -56,15 +54,29 @@ def ask(payload: Question):
     if not os.getenv("JAIS_API_KEY"):
         raise HTTPException(status_code=500, detail="JAIS_API_KEY is missing")
     try:
-        collection, model = rag_resources()
-        embedding = model.encode("query: " + payload.question, normalize_embeddings=True)
-        args = {"query_embeddings": [embedding.tolist()], "n_results": 5,
-                "include": ["documents", "metadatas", "distances"]}
-        if payload.level is not None:
-            args["where"] = {"level": payload.level}
-        results = collection.query(**args)
-        passages = [f"المستوى: {meta.get('level', '')}\nالموضوع: {meta.get('topic', '')}\nالنص: {text}"
-                    for text, meta in zip(results["documents"][0], results["metadatas"][0])]
+        index = rag_resources()
+
+        results = index.documents.search(
+            namespace="tajweed",
+            top_k=5,
+            score_by=[
+                EmbedQuery(
+                    field="chunk_text",
+                    query=payload.question
+                )
+            ],
+            include_fields=["chunk_text", "level", "topic"],
+            filter={"level": {"$eq": int(payload.level)}}
+            if payload.level is not None else None
+        )
+
+        passages = [
+            f"المستوى: {doc.level}\n"
+            f"الموضوع: {doc.topic}\n"
+            f"النص: {doc.chunk_text}"
+            for doc in results.matches
+        ]
+
         context = "\n\n---\n\n".join(passages)
         client = OpenAI(api_key=os.environ["JAIS_API_KEY"], base_url="https://api.ifm.ai/v1")
         response = client.chat.completions.create(
@@ -74,4 +86,8 @@ def ask(payload: Question):
             temperature=0.2)
         return {"answer": response.choices[0].message.content}
     except Exception as exc:
-        raise HTTPException(status_code=500, detail=f"RAG request failed: {type(exc).__name__}") from exc
+        traceback.print_exc()
+        raise HTTPException(
+            status_code=500,
+            detail=f"RAG request failed: {type(exc).__name__}"
+        ) from exc

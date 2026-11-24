@@ -1,5 +1,5 @@
 fastapi
 uvicorn[standard]
-chromadb
-sentence-transformers
+pinecone
 openai
+python-dotenv
