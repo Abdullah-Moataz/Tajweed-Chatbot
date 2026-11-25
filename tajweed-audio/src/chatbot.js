@@ -1,3 +1,4 @@
+import { bookLoader } from "./book-loader.js";
 
 export async function askTajweed(question) {
   const response = await fetch("https://tajweed-rag-api.vercel.app/ask", {
@@ -35,19 +36,21 @@ export function createChatbot() {
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const question = input.value.trim();
-    if (!question) return;
+    if (!question || button.disabled) return;
 
     addMessage(question, "user");
     input.value = "";
     button.disabled = true;
 
-    const loading = addMessage("جاري التفكير...", "assistant");
+    const loading = addMessage("", "assistant");
+    loading.append(bookLoader(), document.createTextNode("جارٍ إعداد الإجابة..."));
+    messages.scrollTop = messages.scrollHeight;
 
     try {
       const data = await askTajweed(question);
       loading.textContent = data.answer || "لم يتم العثور على إجابة.";
     } catch (error) {
-      loading.textContent = "حدث خطأ في الاتصال. تأكد من تشغيل FastAPI.";
+      loading.textContent = "حدث خطأ في الاتصال. يرجى المحاولة مرة أخرى.";
     } finally {
       button.disabled = false;
     }
