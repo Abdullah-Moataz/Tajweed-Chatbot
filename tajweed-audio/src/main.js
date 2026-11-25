@@ -12,6 +12,7 @@ npm.cmd run dev
 
 import { createChatbot } from "./chatbot.js";
 import "./website.css";
+import { bookLoader } from "./book-loader.js";
 import { TajweedClient } from "@quran-lab/tajweedformer";
 
 // Existing HTML elements
@@ -205,7 +206,7 @@ surahLabel.appendChild(surahSelector);
 if (ayahSelector) {
   ayahSelector.parentNode.insertBefore(
     surahLabel,
-    ayahSelector
+    ayahSelector.parentNode.firstChild
   );
 
   ayahSelector.replaceChildren();
@@ -1787,6 +1788,7 @@ async function initialize() {
     if (listenButton) {
       listenButton.addEventListener("click", async () => {
         listenButton.disabled = true;
+        [surahSelector, ayahSelector, microphoneEnd].forEach(el => el.disabled = true);
 
         if (status) status.textContent = "جارٍ الاستماع...";
         if (heard) heard.textContent = "";
@@ -1809,8 +1811,17 @@ async function initialize() {
           validateReferences(model, references);
 
           const session = await model.listen({
-          endOnSilenceMs: from === to ? 1500 : 3500
+          endOnSilenceMs: 0
           });
+          activeSession = session;
+          finishPromise = null;
+          stopButton.disabled = false;
+          const startedAt = Date.now();
+          recordClock.textContent = '00:00';
+          recordTimer = setInterval(() => {
+            const s = Math.floor((Date.now()-startedAt)/1000);
+            recordClock.textContent = `${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;
+          }, 250);
           console.log("SESSION API:", {
           sessionKeys: Object.keys(session),
           sessionMethods: Object.getOwnPropertyNames(
@@ -1826,7 +1837,9 @@ async function initialize() {
             }
           }
 
-          const heads = await session.finish();
+          stopButton.disabled = true;
+          clearInterval(recordTimer);
+          const heads = await (finishPromise || session.finish());
           const timingHead = heads.get("timing_log_probs");
           console.log("RECOGNIZED SOUNDS:",
           heads.decoded()?.tokens?.map(t => ({
@@ -1929,6 +1942,9 @@ async function initialize() {
               `تعذر تحليل التلاوة: ${error.message}`;
           }
         } finally {
+          clearInterval(recordTimer);
+          activeSession = null; finishPromise = null; stopButton.disabled = true;
+          [surahSelector, ayahSelector, microphoneEnd].forEach(el => el.disabled = false);
           listenButton.disabled = !SURAH;
         }
       });
@@ -1945,6 +1961,22 @@ async function initialize() {
 }
 
 // Website UI: loading state, navigation and chatbot mount (not Tajweed logic).
+const selectorRow = document.querySelector('.selector-anchor');
+const fromLabel = selectorRow.querySelector('label[for="ayah"]');
+fromLabel.append(ayahSelector);
+selectorRow.append(surahLabel, fromLabel, microphoneEndLabel);
+const readingPanel = selectorRow.closest('.panel');
+const recordingPanel = document.querySelector('.recording-panel');
+readingPanel.append(recordingPanel.querySelector('.recitation-controls'), recordingPanel.querySelector('.helper'));
+const stopButton = document.querySelector('#stop-listen');
+const recordClock = document.querySelector('#record-clock');
+let activeSession = null, finishPromise = null, recordTimer = null;
+stopButton.addEventListener('click', () => {
+  if (!activeSession || finishPromise) return;
+  stopButton.disabled = true;
+  finishPromise = Promise.resolve().then(() => activeSession.finish());
+  finishPromise.catch(() => {});
+});
 const modelSetupButton = document.querySelector("#load-model");
 const modelSetupPanel = document.querySelector("#model-setup");
 const statusNodes = [status, uploadStatus].filter(Boolean);
@@ -1957,16 +1989,21 @@ const syncBusy = () => {
 const statusObserver = new MutationObserver(syncBusy);
 for (const node of statusNodes) statusObserver.observe(node, {childList:true,subtree:true,characterData:true});
 syncBusy();
+const modelBook = bookLoader();
+modelBook.hidden = true;
+modelSetupPanel.append(modelBook);
 modelSetupButton?.addEventListener("click", async () => {
   if (!SURAH) { if (status) status.textContent = "اختر السورة أولًا."; return; }
   if (modelLoadingPromise) return;
   modelSetupButton.disabled = true;
   modelSetupButton.textContent = "جارٍ تجهيز النموذج...";
   modelSetupPanel?.classList.add("loading");
+  modelBook.hidden = false;
   modelLoadingPromise = initialize();
   try { await modelLoadingPromise; }
   finally {
     modelSetupPanel?.classList.remove("loading");
+    modelBook.hidden = true;
     modelSetupButton.textContent = "إعادة محاولة تجهيز النموذج";
     modelSetupButton.disabled = false;
     modelLoadingPromise = null;
@@ -2025,7 +2062,7 @@ const chatMount = document.querySelector("#chatbot-mount");
 try {
   const chatbot = createChatbot();
   chatMount?.appendChild(chatbot);
-  attachChatLoading(chatbot);
+  // Loading is managed by chatbot.js.
 } catch (error) {
   console.error("Chatbot setup error:", error);
   if (chatMount) chatMount.textContent = "تعذر تهيئة المساعد الذكي. تحقق من ملف chatbot.js وإعدادات API.";
